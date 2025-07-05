@@ -1,0 +1,126 @@
+/home/bernd/.gradle/jdks/eclipse_adoptium-21-amd64-linux.2/bin/java -XX:TieredStopAtLevel=1 -Dspring.output.ansi.enabled=always -Dcom.sun.management.jmxremote -Dspring.jmx.enabled=true -Dspring.liveBeansView.mbeanDomain -Dspring.application.admin.enabled=true -Dmanagement.endpoints.jmx.exposure.include=* -javaagent:/home/bernd/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/lib/idea_rt.jar=39315 -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath /home/bernd/git/grobtree-testing/cxf-example/target/classes:/home/bernd/.m2/repository/org/springframework/boot/spring-boot-starter/3.5.6/spring-boot-starter-3.5.6.jar:/home/bernd/.m2/repository/org/springframework/boot/spring-boot/3.5.6/spring-boot-3.5.6.jar:/home/bernd/.m2/repository/org/springframework/spring-context/6.2.11/spring-context-6.2.11.jar:/home/bernd/.m2/repository/org/springframework/spring-aop/6.2.11/spring-aop-6.2.11.jar:/home/bernd/.m2/repository/org/springframework/spring-beans/6.2.11/spring-beans-6.2.11.jar:/home/bernd/.m2/repository/org/springframework/spring-expression/6.2.11/spring-expression-6.2.11.jar:/home/bernd/.m2/repository/io/micrometer/micrometer-observation/1.15.4/micrometer-observation-1.15.4.jar:/home/bernd/.m2/repository/io/micrometer/micrometer-commons/1.15.4/micrometer-commons-1.15.4.jar:/home/bernd/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.5.6/spring-boot-autoconfigure-3.5.6.jar:/home/bernd/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.5.6/spring-boot-starter-logging-3.5.6.jar:/home/bernd/.m2/repository/ch/qos/logback/logback-classic/1.5.18/logback-classic-1.5.18.jar:/home/bernd/.m2/repository/ch/qos/logback/logback-core/1.5.18/logback-core-1.5.18.jar:/home/bernd/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.24.3/log4j-to-slf4j-2.24.3.jar:/home/bernd/.m2/repository/org/apache/logging/log4j/log4j-api/2.24.3/log4j-api-2.24.3.jar:/home/bernd/.m2/repository/org/slf4j/jul-to-slf4j/2.0.17/jul-to-slf4j-2.0.17.jar:/home/bernd/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/home/bernd/.m2/repository/org/springframework/spring-core/6.2.11/spring-core-6.2.11.jar:/home/bernd/.m2/repository/org/springframework/spring-jcl/6.2.11/spring-jcl-6.2.11.jar:/home/bernd/.m2/repository/org/yaml/snakeyaml/2.4/snakeyaml-2.4.jar:/home/bernd/.m2/repository/org/apache/cxf/cxf-spring-boot-starter-jaxrs/4.1.3/cxf-spring-boot-starter-jaxrs-4.1.3.jar:/home/bernd/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.5.6/spring-boot-starter-web-3.5.6.jar:/home/bernd/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.5.6/spring-boot-starter-json-3.5.6.jar:/home/bernd/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.20.0/jackson-datatype-jdk8-2.20.0.jar:/home/bernd/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.20.0/jackson-module-parameter-names-2.20.0.jar:/home/bernd/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.5.6/spring-boot-starter-tomcat-3.5.6.jar:/home/bernd/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.46/tomcat-embed-core-10.1.46.jar:/home/bernd/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.46/tomcat-embed-websocket-10.1.46.jar:/home/bernd/.m2/repository/org/springframework/spring-web/6.2.11/spring-web-6.2.11.jar:/home/bernd/.m2/repository/org/springframework/spring-webmvc/6.2.11/spring-webmvc-6.2.11.jar:/home/bernd/.m2/repository/org/apache/cxf/cxf-spring-boot-autoconfigure/4.1.3/cxf-spring-boot-autoconfigure-4.1.3.jar:/home/bernd/.m2/repository/org/apache/cxf/cxf-rt-transports-http/4.1.3/cxf-rt-transports-http-4.1.3.jar:/home/bernd/.m2/repository/org/apache/cxf/cxf-rt-frontend-jaxrs/4.1.3/cxf-rt-frontend-jaxrs-4.1.3.jar:/home/bernd/.m2/repository/jakarta/ws/rs/jakarta.ws.rs-api/3.1.0/jakarta.ws.rs-api-3.1.0.jar:/home/bernd/.m2/repository/org/apache/cxf/cxf-rt-security/4.1.3/cxf-rt-security-4.1.3.jar:/home/bernd/.m2/repository/org/eclipse/angus/angus-activation/2.0.2/angus-activation-2.0.2.jar:/home/bernd/.m2/repository/org/apache/cxf/cxf-rt-rs-client/4.1.3/cxf-rt-rs-client-4.1.3.jar:/home/bernd/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/home/bernd/.m2/repository/org/springframework/boot/spring-boot-starter-validation/3.5.6/spring-boot-starter-validation-3.5.6.jar:/home/bernd/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.46/tomcat-embed-el-10.1.46.jar:/home/bernd/.m2/repository/org/hibernate/validator/hibernate-validator/8.0.3.Final/hibernate-validator-8.0.3.Final.jar:/home/bernd/.m2/repository/org/jboss/logging/jboss-logging/3.6.1.Final/jboss-logging-3.6.1.Final.jar:/home/bernd/.m2/repository/com/fasterxml/classmate/1.7.0/classmate-1.7.0.jar:/home/bernd/.m2/repository/org/apache/cxf/cxf-spring-boot-starter-jaxws/4.1.3/cxf-spring-boot-starter-jaxws-4.1.3.jar:/home/bernd/.m2/repository/org/apache/cxf/cxf-rt-frontend-jaxws/4.1.3/cxf-rt-frontend-jaxws-4.1.3.jar:/home/bernd/.m2/repository/xml-resolver/xml-resolver/1.2/xml-resolver-1.2.jar:/home/bernd/.m2/repository/org/ow2/asm/asm/9.8/asm-9.8.jar:/home/bernd/.m2/repository/org/apache/cxf/cxf-rt-bindings-soap/4.1.3/cxf-rt-bindings-soap-4.1.3.jar:/home/bernd/.m2/repository/org/apache/cxf/cxf-rt-wsdl/4.1.3/cxf-rt-wsdl-4.1.3.jar:/home/bernd/.m2/repository/wsdl4j/wsdl4j/1.6.3/wsdl4j-1.6.3.jar:/home/bernd/.m2/repository/org/apache/cxf/cxf-rt-databinding-jaxb/4.1.3/cxf-rt-databinding-jaxb-4.1.3.jar:/home/bernd/.m2/repository/org/apache/cxf/cxf-rt-bindings-xml/4.1.3/cxf-rt-bindings-xml-4.1.3.jar:/home/bernd/.m2/repository/org/apache/cxf/cxf-rt-frontend-simple/4.1.3/cxf-rt-frontend-simple-4.1.3.jar:/home/bernd/.m2/repository/org/eclipse/angus/angus-mail/2.0.4/angus-mail-2.0.4.jar:/home/bernd/.m2/repository/jakarta/mail/jakarta.mail-api/2.1.4/jakarta.mail-api-2.1.4.jar:/home/bernd/.m2/repository/org/apache/cxf/cxf-rt-ws-addr/4.1.3/cxf-rt-ws-addr-4.1.3.jar:/home/bernd/.m2/repository/org/apache/cxf/cxf-rt-ws-policy/4.1.3/cxf-rt-ws-policy-4.1.3.jar:/home/bernd/.m2/repository/org/apache/neethi/neethi/3.2.1/neethi-3.2.1.jar:/home/bernd/.m2/repository/org/apache/cxf/cxf-rt-features-metrics/4.1.3/cxf-rt-features-metrics-4.1.3.jar:/home/bernd/.m2/repository/org/apache/cxf/cxf-rt-features-logging/4.1.3/cxf-rt-features-logging-4.1.3.jar:/home/bernd/.m2/repository/jakarta/xml/ws/jakarta.xml.ws-api/4.0.2/jakarta.xml.ws-api-4.0.2.jar:/home/bernd/.m2/repository/jakarta/xml/soap/jakarta.xml.soap-api/3.0.2/jakarta.xml.soap-api-3.0.2.jar:/home/bernd/.m2/repository/org/apache/cxf/cxf-core/4.1.3/cxf-core-4.1.3.jar:/home/bernd/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.5/jaxb-runtime-4.0.5.jar:/home/bernd/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.5/jaxb-core-4.0.5.jar:/home/bernd/.m2/repository/org/glassfish/jaxb/txw2/4.0.5/txw2-4.0.5.jar:/home/bernd/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/home/bernd/.m2/repository/com/fasterxml/woodstox/woodstox-core/7.1.1/woodstox-core-7.1.1.jar:/home/bernd/.m2/repository/org/codehaus/woodstox/stax2-api/4.2.2/stax2-api-4.2.2.jar:/home/bernd/.m2/repository/org/apache/ws/xmlschema/xmlschema-core/2.3.1/xmlschema-core-2.3.1.jar:/home/bernd/.m2/repository/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.jar:/home/bernd/.m2/repository/com/fasterxml/jackson/jakarta/rs/jackson-jakarta-rs-json-provider/2.20.0/jackson-jakarta-rs-json-provider-2.20.0.jar:/home/bernd/.m2/repository/com/fasterxml/jackson/jakarta/rs/jackson-jakarta-rs-base/2.20.0/jackson-jakarta-rs-base-2.20.0.jar:/home/bernd/.m2/repository/com/fasterxml/jackson/module/jackson-module-jakarta-xmlbind-annotations/2.20.0/jackson-module-jakarta-xmlbind-annotations-2.20.0.jar:/home/bernd/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.4/jakarta.activation-api-2.1.4.jar:/home/bernd/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.20.0/jackson-databind-2.20.0.jar:/home/bernd/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.20/jackson-annotations-2.20.jar:/home/bernd/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.20.0/jackson-core-2.20.0.jar:/home/bernd/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.20.0/jackson-datatype-jsr310-2.20.0.jar:/home/bernd/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.2/jakarta.xml.bind-api-4.0.2.jar net.gronostay.grobtree.examples.cxfexample.CxfExampleApplication
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.6)
+
+2025-10-07T18:36:30.026+02:00 INFO  [main] n.g.g.e.c.CxfExampleApplication - Starting CxfExampleApplication using Java 21.0.8 with PID 4768 (/home/bernd/git/grobtree-testing/cxf-example/target/classes started by bernd in /home/bernd/git/grobtree-testing)
+2025-10-07T18:36:30.029+02:00 INFO  [main] n.g.g.e.c.CxfExampleApplication - No active profile set, falling back to 1 default profile: "default"
+2025-10-07T18:36:31.557+02:00 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-10-07T18:36:31.571+02:00 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-10-07T18:36:31.571+02:00 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-07T18:36:31.612+02:00 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-10-07T18:36:31.613+02:00 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1515 ms
+2025-10-07T18:36:31.851+02:00 INFO  [main] o.a.c.w.s.f.ReflectionServiceFactoryBean - Creating Service {http://examples.grobtree.gronostay.net/soap}HelloSoapService from class net.gronostay.grobtree.examples.cxfexample.soap.HelloSoapService
+2025-10-07T18:36:32.173+02:00 INFO  [main] org.apache.cxf.endpoint.ServerImpl - Setting the server's publish address to be /soap/helloService
+2025-10-07T18:36:32.217+02:00 INFO  [main] org.apache.cxf.endpoint.ServerImpl - Setting the server's publish address to be /rest
+2025-10-07T18:36:32.640+02:00 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-10-07T18:36:32.648+02:00 INFO  [main] n.g.g.e.c.CxfExampleApplication - Started CxfExampleApplication in 3.323 seconds (process running for 4.411)
+2025-10-07T18:36:32.863+02:00 INFO  [main] o.a.cxf.services.WebClient.REQ_OUT - REQ_OUT
+    Address: http://localhost:8080/services/rest/hello?name=REST+Client
+    HttpMethod: GET
+    ExchangeId: 1054a0ae-57e9-4e3c-a975-5d6e3bf2f251
+    Headers: {Accept=application/json}
+
+2025-10-07T18:36:33.001+02:00 INFO  [http-nio-8080-exec-1] o.a.c.s.HelloRestService.REQ_IN - REQ_IN
+    Address: http://localhost:8080/services/rest/hello?name=REST+Client
+    HttpMethod: GET
+    ExchangeId: 7bae8185-cb68-41e8-8510-0391bd3d8d5f
+    Headers: {Accept=application/json, upgrade=h2c, host=localhost:8080, connection=Upgrade, HTTP2-Settings, Content-Length=0, http2-settings=AAEAAEAAAAIAAAAAAAMAAAAAAAQBAAAAAAUAAEAAAAYABgAA, user-agent=Apache-CXF/4.1.3}
+
+2025-10-07T18:36:33.071+02:00 INFO  [http-nio-8080-exec-1] o.a.c.s.HelloRestService.RESP_OUT - RESP_OUT
+    Address: http://localhost:8080/services/rest/hello?name=REST+Client
+    Content-Type: application/json
+    ResponseCode: 200
+    ExchangeId: 7bae8185-cb68-41e8-8510-0391bd3d8d5f
+    Headers: {Date=Tue, 07 Oct 2025 16:36:33 GMT, Content-Type=application/json}
+    Payload: {"message":"Hello, REST Client!","timestamp":"2025-10-07T18:36:33.002607946+02:00"}
+
+2025-10-07T18:36:33.094+02:00 INFO  [main] o.a.cxf.services.WebClient.RESP_IN - RESP_IN
+    Address: http://localhost:8080/services/rest/hello?name=REST+Client
+    Content-Type: application/json
+    ResponseCode: 200
+    ExchangeId: 1054a0ae-57e9-4e3c-a975-5d6e3bf2f251
+    Headers: {date=Tue, 07 Oct 2025 16:36:33 GMT, transfer-encoding=chunked, content-type=application/json}
+    Payload: {"message":"Hello, REST Client!","timestamp":"2025-10-07T18:36:33.002607946+02:00"}
+
+2025-10-07T18:36:33.142+02:00 INFO  [main] n.g.g.e.c.client.RestClientRunner - REST client received -> message='Hello, REST Client!', timestamp='2025-10-07T18:36:33.002607946+02:00'
+2025-10-07T18:36:33.148+02:00 INFO  [main] o.a.c.w.s.f.ReflectionServiceFactoryBean - Creating Service {http://examples.grobtree.gronostay.net/soap}HelloSoapServiceService from class net.gronostay.grobtree.examples.cxfexample.soap.HelloSoapService
+2025-10-07T18:36:33.251+02:00 INFO  [main] o.a.c.s.HelloSoapService.REQ_OUT - REQ_OUT
+    Address: http://localhost:8080/services/soap/helloService
+    HttpMethod: POST
+    Content-Type: text/xml
+    ExchangeId: e6667899-c788-4f7d-98f6-83f3ab61bfae
+    ServiceName: HelloSoapServiceService
+    PortName: HelloSoapServicePort
+    PortTypeName: HelloSoapService
+    Headers: {SOAPAction="", Accept=*/*}
+    Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <ns2:greet xmlns:ns2="http://examples.grobtree.gronostay.net/soap">
+      <arg0>SOAP Client</arg0>
+    </ns2:greet>
+  </soap:Body>
+</soap:Envelope>
+
+
+2025-10-07T18:36:33.271+02:00 INFO  [http-nio-8080-exec-2] o.a.c.s.HelloSoapService.REQ_IN - REQ_IN
+    Address: http://localhost:8080/services/soap/helloService
+    HttpMethod: POST
+    Content-Type: text/xml; charset=UTF-8
+    ExchangeId: 0c9ec9c4-d963-4ef4-a6db-15d56e7dcc78
+    ServiceName: HelloSoapService
+    PortName: HelloSoapServiceImplPort
+    PortTypeName: HelloSoapService
+    Headers: {SOAPAction="", Accept=*/*, upgrade=h2c, host=localhost:8080, connection=Upgrade, HTTP2-Settings, content-type=text/xml; charset=UTF-8, Content-Length=212, http2-settings=AAEAAEAAAAIAAAAAAAMAAAAAAAQBAAAAAAUAAEAAAAYABgAA, user-agent=Apache-CXF/4.1.3}
+    Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <ns2:greet xmlns:ns2="http://examples.grobtree.gronostay.net/soap">
+      <arg0>SOAP Client</arg0>
+    </ns2:greet>
+  </soap:Body>
+</soap:Envelope>
+
+
+2025-10-07T18:36:33.280+02:00 INFO  [http-nio-8080-exec-2] o.a.c.s.HelloSoapService.RESP_OUT - RESP_OUT
+    Address: http://localhost:8080/services/soap/helloService
+    Content-Type: text/xml
+    ResponseCode: 200
+    ExchangeId: 0c9ec9c4-d963-4ef4-a6db-15d56e7dcc78
+    ServiceName: HelloSoapService
+    PortName: HelloSoapServiceImplPort
+    PortTypeName: HelloSoapService
+    Headers: {}
+    Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <ns2:greetResponse xmlns:ns2="http://examples.grobtree.gronostay.net/soap">
+      <return>Hello, SOAP Client!</return>
+    </ns2:greetResponse>
+  </soap:Body>
+</soap:Envelope>
+
+
+2025-10-07T18:36:33.287+02:00 INFO  [main] o.a.c.s.HelloSoapService.RESP_IN - RESP_IN
+    Address: http://localhost:8080/services/soap/helloService
+    Content-Type: text/xml;charset=UTF-8
+    ResponseCode: 200
+    ExchangeId: e6667899-c788-4f7d-98f6-83f3ab61bfae
+    ServiceName: HelloSoapServiceService
+    PortName: HelloSoapServicePort
+    PortTypeName: HelloSoapService
+    Headers: {date=Tue, 07 Oct 2025 16:36:33 GMT, content-type=text/xml;charset=UTF-8, Content-Length=240}
+    Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <ns2:greetResponse xmlns:ns2="http://examples.grobtree.gronostay.net/soap">
+      <return>Hello, SOAP Client!</return>
+    </ns2:greetResponse>
+  </soap:Body>
+</soap:Envelope>
+
+
+2025-10-07T18:36:33.288+02:00 INFO  [main] n.g.g.e.c.client.SoapClientRunner - SOAP client received -> 'Hello, SOAP Client!'
