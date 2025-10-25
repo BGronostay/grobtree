@@ -7,6 +7,8 @@ Central knowledge base for the GrobTree ecosystem. Start with onboarding if you 
 
 ## How-to Guides
 - [Using GrobTree](./using-grobtree.md) – Navigate the tool window, manage tabs, and tune parsing behaviour.
+- [User Interface](./ui/user-interface.md) – Understand the tool window layout and primary actions.
+- [Toolbar Buttons](./ui/toolbar-buttons.md) – Icon reference and behaviour for every GrobTree toolbar control.
 - [IntelliJ Settings](./intellij-settings.md) – Configure GrobTree’s settings and advanced options inside the IDE.
 
 ## Reference
