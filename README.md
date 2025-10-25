@@ -15,7 +15,7 @@ For the full documentation set, visit the [docs index](./docs/README.md).
 - [Documentation](#documentation)
   - [Documentation Index](./docs/README.md)
   - Onboarding: [Getting Started Guide](./docs/getting-started.md)
-  - How-to Guides: [Using GrobTree](./docs/using-grobtree.md)
+  - How-to Guides: [Using GrobTree](./docs/using-grobtree.md), [IntelliJ Settings](./docs/intellij-settings.md)
   - Reference: [Extending GrobTree](./docs/extending-grobtree.md)
 - [Ecosystem Projects](#ecosystem-projects)
 - [FAQ & Support](#faq--support)
@@ -51,6 +51,7 @@ The bundled configuration is active until you point GrobTree at a custom file or
   - [Getting Started Guide](./docs/getting-started.md) – Installation, first-run setup, and demo project tour.
 - **How-to Guides**
   - [Using GrobTree](./docs/using-grobtree.md) – Tool window overview, log tree navigation, and configuration file anatomy.
+  - [IntelliJ Settings](./docs/intellij-settings.md) – Detailed walkthrough for configuring the IDE integration.
 - **Reference**
   - [Extending GrobTree](./docs/extending-grobtree.md) – Public APIs, extension building blocks, and sample projects.
 

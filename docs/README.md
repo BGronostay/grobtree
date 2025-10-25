@@ -7,6 +7,7 @@ Central knowledge base for the GrobTree ecosystem. Start with onboarding if you 
 
 ## How-to Guides
 - [Using GrobTree](./using-grobtree.md) – Navigate the tool window, manage tabs, and tune parsing behaviour.
+- [IntelliJ Settings](./intellij-settings.md) – Configure GrobTree’s settings and advanced options inside the IDE.
 
 ## Reference
 - [Extending GrobTree](./extending-grobtree.md) – Integrate custom listeners, factories, and log providers.
