@@ -11,6 +11,20 @@ Selecting a node synchronises the common editor view, highlights search hits, an
 
 ![Full GrobTree View with CXF Demo Output](images/FullScreenCxfExample.png)
 
+## Tab Settings Dialog
+Each GrobTree tab can override parsing and display rules through the tab-settings gear. The dialog is generated from the active `ConverterConfig.xml`, so panels appear only when the configuration defines matching elements.
+
+- **Evaluation configs** – Lists every `<SelectableConfig>` from `<EvaluationConfigs>`. Pick the preset you want the tab to use; the remaining sections reflect the currently selected config.
+- **Splitting** – Adjusts how GrobTree segments logs. It exposes the `<RegEx>` definitions together with split options supplied by `<LogToNodeConverterConfig>` (for example, single-line mode).
+- **Processing** – Enables or disables node creators from `<ProcessingListeners>`. When a listener offers extra configuration, its controls appear here as nested sections.
+- **Parameters** – Toggles caption components defined in `<ParamConfigs>` and additional caption fragments from `<TopNodeCaptionConfig>`.
+- **Entries** – Mirrors `<ParamDisplayConfigs>`, letting you choose which level or status values can be highlighted when “Show all entries” is active.
+- **Preferred Node** – Maps to `<TopLogNodeConfig>` so you can pick the sub-node GrobTree opens automatically when a top-level node is selected.
+- **Miscellaneous** – Surfaces viewer flags from `<Parameters>` (auto-expand behaviour, duplicate suppression, buffer settings).
+- **General ▸ Icons / Variables** – Appears when the configuration includes `<Icons>` or `<Variables>`. The dialog renders read-only tables so you can copy icon names or variable values while editing.
+
+Press **OK** to apply the changes. If the evaluation config requests `reload-after-storing-configuration="true"`, GrobTree immediately rebuilds the current tree with the new settings.
+
 ## Configuring GrobTree
 
 ### IntelliJ Settings
