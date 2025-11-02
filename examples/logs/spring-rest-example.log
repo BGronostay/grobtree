@@ -1,0 +1,33 @@
+2025-01-14T10:12:03.128+01:00 INFO  [spring-rest] Starting SpringRestApplication v1.3.0 on host local with PID 84217 (/opt/services/spring-rest.jar started by user in /opt/services)
+2025-01-14T10:12:03.132+01:00 INFO  [spring-rest] No active profile set, falling back to 1 default profile: "default"
+2025-01-14T10:12:05.341+01:00 INFO  [spring-rest] Started SpringRestApplication in 2.957 seconds (process running for 3.411)
+2025-01-14T10:12:12.004+01:00 INFO  [http-nio-8080-exec-2] --> POST /api/orders
+2025-01-14T10:12:12.006+01:00 INFO  [http-nio-8080-exec-2] Headers: traceId=e358ac5ba118432b, userId=jsmith
+2025-01-14T10:12:12.009+01:00 DEBUG [http-nio-8080-exec-2] Payload:
+{
+  "orderId": "ORD-2025-00017",
+  "items": [
+    {"sku": "SKU-10001", "qty": 1, "price": 19.99},
+    {"sku": "SKU-20002", "qty": 2, "price": 4.99}
+  ],
+  "total": 29.97,
+  "customer": {"id": "C-7128", "segment": "PLUS"}
+}
+2025-01-14T10:12:12.019+01:00 INFO  [order-evaluator] Calculated tax=5.69 promotions=2.50 for order ORD-2025-00017 (customerSegment=PLUS)
+2025-01-14T10:12:12.051+01:00 INFO  [inventory-client] Reserving stock for orderId=ORD-2025-00017
+2025-01-14T10:12:12.083+01:00 INFO  [inventory-client] Stock reservation succeeded items=3 duration=29ms
+2025-01-14T10:12:12.118+01:00 INFO  [http-nio-8080-exec-2] <-- 201 CREATED /api/orders traceId=e358ac5ba118432b duration=114ms
+2025-01-14T10:12:12.118+01:00 INFO  [http-nio-8080-exec-2] Response Headers: traceId=e358ac5ba118432b, Location=/api/orders/ORD-2025-00017
+2025-01-14T10:12:12.119+01:00 DEBUG [http-nio-8080-exec-2] Response Payload:
+{
+  "orderId": "ORD-2025-00017",
+  "status": "CONFIRMED",
+  "estimatedDelivery": "2025-01-16",
+  "links": [
+    {"rel": "self", "href": "/api/orders/ORD-2025-00017"},
+    {"rel": "tracking", "href": "/api/orders/ORD-2025-00017/tracking"}
+  ]
+}
+2025-01-14T10:12:22.332+01:00 WARN  [http-nio-8080-exec-5] --> GET /api/orders/ORD-2025-00018 (missing) traceId=8d7235b18d4d4c5a
+2025-01-14T10:12:22.350+01:00 INFO  [order-repository] lookup(orderId=ORD-2025-00018) returned empty result
+2025-01-14T10:12:22.355+01:00 WARN  [http-nio-8080-exec-5] <-- 404 NOT_FOUND /api/orders/ORD-2025-00018 traceId=8d7235b18d4d4c5a duration=23ms
