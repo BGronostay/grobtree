@@ -34,15 +34,15 @@ When “External configuration file” is selected, the browse field underneath 
 ## Advanced Settings
 Open `Settings → Tools → GrobTree Advanced` for fine-grained behaviour tweaks.
 
-| Setting | Effect | When to change |
-| --- | --- | --- |
-| **Override With Config If Available** | If the loaded configuration exposes `pluginName`/`pluginIconPath`, GrobTree renames the tool window stripe and swaps its icon. | Branding the tool window for a specific project or client. |
-| **Always reload configuration** | Skips caching and reparses the configuration on every access. Guarantees fresh data but costs extra I/O. | Editing XML by hand and testing frequently. Turn it off in stable environments to speed up startup. |
-| **Always show update tab settings button** | Keeps the “Update and Overwrite with Defaults” toolbar action visible even when nothing changed. | Training sessions or scripted demos where you need to highlight the button’s purpose. |
-| **Hide not enabled buttons** | Suppresses toolbar actions when GrobTree disables them. When unchecked, disabled buttons remain visible but greyed out. | Minimalist UI preferences or shared screenshots where inactive buttons cause confusion. |
-| **Default selectable RegEx id** | Preselects a named regular-expression preset when multiple options exist in the configuration. Leave blank to accept whatever the XML marks as default. | Streamlining onboarding when teams always pick the same splitter. |
-| **Default selectable config id** | Preselects a specific evaluation profile among the configuration’s selectable configs. | Useful when you add new presets but want a stable default for most users. |
-| **Special color** | Overrides the named colour GrobTree uses for emphasis in certain captions. Accepts any JB colour id (e.g., `FC.DEFAULT_CONSTANT` or `Actions.Blue`). Falls back to magenta if the name is unknown. | Harmonising GrobTree’s highlight colour with project branding. |
+| Setting | Effect                                                                                                                                                                                                          | When to change |
+| --- |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| --- |
+| **Override With Config If Available** | If the loaded configuration exposes `pluginName`/`pluginIconPath`, GrobTree renames the tool window stripe and swaps its icon.                                                                                  | Branding the tool window for a specific project or client. |
+| **Always reload configuration** | Skips caching and reparses the configuration on every access. Guarantees fresh data but costs extra I/O.                                                                                                        | Editing XML by hand and testing frequently. Turn it off in stable environments to speed up startup. |
+| **Always show update tab settings button** | Keeps the “Update and Overwrite with Defaults” toolbar action visible even when nothing changed.                                                                                                                | Training sessions or scripted demos where you need to highlight the button’s purpose. |
+| **Hide not enabled buttons** | Suppresses toolbar actions when GrobTree disables them. When unchecked, disabled buttons remain visible but greyed out.                                                                                         | Minimalist UI preferences or shared screenshots where inactive buttons cause confusion. |
+| **Default selectable RegEx id** | Preselects a named regular-expression preset when multiple options exist in the configuration. Leave blank to accept whatever the XML marks as default.                                                         | Streamlining onboarding when teams always pick the same splitter. |
+| **Default selectable config id** | Preselects a specific evaluation profile among the configuration’s selectable configs.                                                                                                                          | Useful when you add new presets but want a stable default for most users. |
+| **Special color** | Overrides the named colour GrobTree uses for emphasis in certain captions. Accepts any JB colour id (e.g., `JB.JBColor.RED` or `FC.DEFAULT_CONSTANT`. Falls back to magenta if the name is unknown. | Harmonising GrobTree’s highlight colour with project branding. |
 
 Changes on the Advanced page are applied immediately after pressing **Apply** and force GrobTree to rebuild its internal configuration cache, so the next log import reflects your new defaults.
 
