@@ -33,7 +33,7 @@ GrobTree exposes two stacked toolbars inside the IntelliJ tool window. The **pri
 | <img src="https://intellij-icons.jetbrains.design/icons/AllIcons/actions/highlighting.svg" width="20" alt="Highlighting"> | Rename the current GrobTree tab. |
 | <img src="https://intellij-icons.jetbrains.design/icons/AllIcons/actions/openNewTab.svg" width="20" alt="OpenNewTab"> | Quickly create a new tab from the main toolbar. |
 | <img src="https://intellij-icons.jetbrains.design/icons/AllIcons/expui/general/settings.svg" width="20" alt="Settings"> | Edit tab-specific settings such as regex selection, display options, and listeners. |
-| <img src="https://intellij-icons.jetbrains.design/icons/AllIcons/general/information.svg" width="20" alt="Information"> | Open the information dialog for the active tab (configuration metadata, diagnostics). |
+| <img src="https://intellij-icons.jetbrains.design/icons/AllIcons/general/information.svg" width="20" alt="Information"> | Open the information dialog for the active tab (see detailed breakdown below). |
 | <img src="https://intellij-icons.jetbrains.design/icons/AllIcons/ide/notification/ideUpdate.svg" width="20" alt="IdeUpdate"> | Reapply the configuration defaults to the current tab when GrobTree detects changes. |
 
 ### Clear Tree Split Button
@@ -71,3 +71,18 @@ These actions live in the tree context menu but are worth knowing when documenti
 | <img src="https://intellij-icons.jetbrains.design/icons/AllIcons/actions/menu-saveall.svg" width="20" alt="MenuSaveAll"> | Save the value of the selected node to disk. |
 | <img src="https://intellij-icons.jetbrains.design/icons/AllIcons/actions/collapseall.svg" width="20" alt="CollapseAll"> | Collapse the selected set of top-level nodes into a synthetic group. |
 | <img src="https://intellij-icons.jetbrains.design/icons/AllIcons/actions/diff.svg" width="20" alt="Diff"> | Compare nodes inside the current tab, project, or across projects. |
+
+## Info Dialog (Per-Tab)
+
+Press the main-toolbar info button to open a compact menu with diagnostics and shortcuts:
+
+| Icon | Entry | Purpose |
+| --- | --- | --- |
+| <img src="https://intellij-icons.jetbrains.design/icons/AllIcons/fileTypes/config.svg" width="20" alt="Config"> | **Open Tab Log** * | Opens a read-only “Configuration loading” document showing everything GrobTree recorded while loading the current configuration—helpful for spotting parse warnings or errors without rerunning anything. |
+| <img src="https://intellij-icons.jetbrains.design/icons/AllIcons/general/settings.svg" width="20" alt="Settings"> | **Open Plugin Settings** | Jumps straight to `Settings → Tools → GrobTree`, where you can switch configuration sources, reload files, or adjust advanced behaviour. |
+| <img src="https://intellij-icons.jetbrains.design/icons/AllIcons/nodes/resourceBundle.svg" width="20" alt="ResourceBundle"> | **Built-In Resources ▸ Icons** † | Shows all IntelliJ icons GrobTree can reference, with copyable names for use in captions or ConverterConfig files. |
+| <img src="https://intellij-icons.jetbrains.design/icons/AllIcons/actions/colors.svg" width="20" alt="Colors"> | **Built-In Resources ▸ Colors** † | Lists available JBColor names. |
+| <img src="https://intellij-icons.jetbrains.design/icons/AllIcons/general/showInfos.svg" width="20" alt="ShowInfos"> | **About GrobTree** | Displays the installed plugin version, author, and branding so you can confirm which build you’re testing or reporting on. |
+
+\* The tab log entry is shown only when a GrobTree tab is active; global shortcuts remain available even when no tab is selected.  
+† Both entries live inside the **Built-In Resources** submenu; pick the variant you need from the fly-out list.
