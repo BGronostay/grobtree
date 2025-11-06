@@ -13,16 +13,12 @@ Open `Settings → Tools → GrobTree` and choose one of the following sources:
 - **External file** – your own `ConverterConfig.xml`.
 - **JAR resource** – a packaged extension that bundles converters and icons.
 
-Optional: enable *Override tool window title/icon* to pull branding info from the selected config.
-
 ## Import Logs
 Inside the GrobTree tool window toolbar you can:
 - Import from file (once-off or with follow/tail).
 - Paste from the clipboard.
 - Attach to a running IntelliJ run configuration (live or historical output).
 - Tail an external file path.
-
-Tabs are created on demand; you can rename, duplicate, clear, and persist them.
 
 ## Try the Demo Project
 The public [`grobtree-testing`](https://github.com/bgronostay/grobtree-testing) repository ships with **cxf-example**, a Spring Boot + Apache CXF application wired for verbose logging:

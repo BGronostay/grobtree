@@ -14,8 +14,3 @@ Central knowledge base for the GrobTree ecosystem. Start with onboarding if you 
 ## Reference
 - [Extending GrobTree](./extending-grobtree.md) – Integrate custom listeners, factories, and log providers.
 - [ConverterConfig.xml Reference](./converter-config.md) – Schema walkthrough covering regex, listeners, variables, and more.
-
-## Contributor Resources
-- [Repository Guidelines](../../AGENTS.md) – Contributor workflow, coding style, testing expectations.
-- [Plugin Source (IntelliJ)](../../grobtree-intellij-idea-plugin) – Main plugin codebase (Gradle).
-- [Testing Projects](../../grobtree-testing) – Sample applications for log generation and end-to-end runs.
