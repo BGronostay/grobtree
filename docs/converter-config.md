@@ -51,6 +51,64 @@ Evaluation configurations are the heart of the file. Each one represents a selec
 - Which processing listeners should run, in what order, and with which settings?
 - What supplementary nodes, icons, or colour rules should be applied to emphasise important values?
 
+### ConfigurableProcessingListener (detailed guide)
+`ConfigurableProcessingListener` is the built-in way to convert parsed log entries into tree nodes without writing Java. It lives inside `<ProcessingListeners>` and can appear alongside other listener types. The listener consumes incoming log entries one by one and decides, based solely on the XML you provide, whether to create top-level nodes, which caption to show, which icon to use, and which sub nodes to attach.
+
+#### High-level flow
+1. Each listener instance declares global attributes plus one or more `<ConfigurableEntry>` blocks.
+2. For every log line, the listener evaluates the entries in document order. The first entry whose pattern and conditions match controls what happens next.
+3. When an entry matches, the listener renders a caption from its `ExString`, creates a top-level node with that caption, records the original log text as the node’s value, applies optional icons or correspondences, and finally builds any declared sub nodes.
+4. Depending on `returnTrueIfFound` (listener level) and `always` (entry level), processing either stops immediately or continues with later entries and/or other listeners.
+
+#### Listener-level attributes
+- `enabled`: Determines whether the listener is available when the configuration loads. Users can toggle it in the UI, but your XML sets the default state.
+- `name` and `description`: Human-readable labels shown in configuration dialogs. Use them to describe what the listener extracts (“HTTP requests”, “Payment pipeline”, etc.).
+- `returnTrueIfFound` (default `true`): Controls whether the overall processing chain stops once this listener creates at least one node for the current log line. Keep it `true` when the listener “owns” a given log format; set it to `false` if subsequent listeners should also see the entry even after this one has produced nodes.
+
+#### ConfigurableEntry structure
+Each `<ConfigurableEntry>` represents one rule. You can add as many as needed; they are checked in order.
+
+- **Pattern** (optional):
+  - Holds a Java-style regular expression. Use named capture groups (`(?<GroupName>...)`) to extract values. Any value captured here can be referenced later via `{GroupName}` placeholders.
+  - The `flags` attribute accepts the numeric bitmask defined by the regular-expression engine (for example, decimal `2` for case-insensitive matching). Omit it or set it to `0` for plain matching.
+  - `useStartPos` (default `true`) determines where matching begins. When `true`, the search starts immediately after GrobTree’s primary regex finished parsing the entry (so timestamps or log prefixes are skipped). Set it to `false` to evaluate the entire raw log line from the very first character.
+  - Patterns are optional. If you only need to display already-parsed parameters, omit `<Pattern>` and rely on `ExString` placeholders.
+
+- **Execution control**:
+  - `always` (default `false`) decides whether this entry runs even if a previous entry already matched. Leave it `false` for mutually exclusive patterns; set it to `true` for supplemental actions such as “also attach payload details when the header matched earlier”.
+  - Entries inherit the listener’s `returnTrueIfFound` behaviour, so if that flag short-circuits the chain you may need to rearrange entries or duplicate the listener when different outcomes are required.
+
+- **Caption templating (`ExString`)**:
+  - `ExString` is required for node creation. It functions as a template: literal characters are printed as-is, and `{Placeholder}` segments are replaced with values.
+  - Placeholders resolve against a merged value map containing (a) all named groups captured by the entry’s pattern and (b) every parameter produced by the evaluation’s active regex (for example, `Level`, `Thread`, `Timestamp`). If multiple values share the same name, the entry-specific group wins.
+  - `ExString` supports multiple segments. Use several `ExString` child nodes to produce differently styled chunks (icons, colors) if desired.
+
+- **Icons and node correlation**:
+  - The optional `icon` attribute points to any icon declared under `<Icons>` or to IntelliJ’s built-in icon IDs. When set, the resulting top node shows that icon in the tree.
+  - `<EqualityStringCorrespondingNodeComparer>` lets GrobTree find related nodes (for instance, pairing “request” and “response” entries). Fill in:
+    - `UniqueId`: A stable identifier shared by all nodes that should participate in the same comparison pool.
+    - `ItemId`: A per-node identifier (such as a correlation ID) used to find matches.
+    - `ShowOnlyNextNodes`: Keep `true` to search forward only, or `false` to allow backward matches.
+    - `MightHaveBeforeNode` / `MightHaveAfterNode`: Set these according to whether predecessors/successors are expected. They guide the UI to highlight missing partners politely.
+
+- **Sub nodes**:
+  - `<SubNodes>` can contain one or more `<KeyValueSubNode>` or other supported node definitions. Each sub node reads from the same merged value map as the caption, so both evaluation-level parameters and entry-specific named groups are available.
+  - Sub nodes execute immediately after the top node is created. They are ideal for showing headers, payload fields, or metadata that does not belong in the caption itself.
+
+#### Value resolution and placeholder strategy
+- The listener always starts with the parameters extracted by the active `RegEx` definition (fields like `Level`, `Thread`, `Payload`, etc.). Think of this as the “base map”.
+- When an entry’s pattern matches, any named groups you defined there are layered on top of that base map. The newer values override keys with the same name.
+- `ExString` placeholders read from this merged map. If a placeholder is referenced but no value exists, it simply vanishes from the caption, so design your templates accordingly.
+- Sub nodes consume the same merged value map, so any placeholder-friendly name you introduce in a pattern is automatically available for child nodes as well.
+
+#### Putting it into practice
+1. **Start specific, end generic**: Order entries roughly from most targeted to most permissive. That way, only one entry typically fires and the `always` attribute can be reserved for special cases.
+2. **Treat `returnTrueIfFound` as a boundary**: Use `true` when the listener represents a final decision about the log entry. Switch to `false` when this listener is merely annotating the entry and other listeners should still run.
+3. **Leverage named groups generously**: Every value you want to reuse in captions should have a meaningful name. Avoid capturing data you do not intend to display—it slows down matching and clutter placeholders.
+4. **Use icons and comparers for orientation**: Consistent icons help readers skim the tree. Corresponding node comparers prevent “orphan” response nodes by automatically highlighting unmatched items.
+
+Following these guidelines, `ConfigurableProcessingListener` can express most node-creation logic directly in XML, keeping your configuration self-contained and understandable even for teammates who only interact with the configuration file.
+
 ---
 
 ## Parameters
