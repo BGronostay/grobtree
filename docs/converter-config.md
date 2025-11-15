@@ -48,8 +48,18 @@ Evaluation configurations are the heart of the file. Each one represents a selec
 - Which regex (or single-line mode) should be active by default?
 - Which captured parameters should appear in captions, live progress, or statistics?
 - How should the caption be composed when no custom logic overrides it?
-- Which processing listeners should run, in what order, and with which settings?
+- Which processing listeners should run, in what order, and with which settings? (See [ProcessingListeners](#processinglisteners) for the GrobTree-provided options.)
 - What supplementary nodes, icons, or colour rules should be applied to emphasise important values?
+
+---
+
+## ProcessingListeners
+Processing listeners bridge parsed log data and the GrobTree UI by creating the tree nodes users inspect. Each `EvaluationConfig` can declare an ordered `<ProcessingListeners>` list; GrobTree evaluates them in order until a listener reports that it handled the entry (unless you explicitly opt out, e.g. via `returnTrueIfFound=false` in ConfigurableProcessingListener). Four built-in listeners cover the common needs, and you can mix them with extension-provided ones.
+
+- **ConfigurableProcessingListener** – pattern-driven, entirely defined in XML. Ideal for most configurations.
+- **ApacheCXFProcessingListener** – specialised CXF parser with icon overrides and hooks.
+- **ExternProcessingListener** – adapter that instantiates a custom `ProcessingListener` implementation via class creation settings.
+- **FallbackProcessingListener** – a safety net that turns every remaining log entry into a node using the evaluation’s `ParamDisplayConfigs`.
 
 ### ConfigurableProcessingListener (detailed guide)
 `ConfigurableProcessingListener` is the built-in way to convert parsed log entries into tree nodes without writing Java. It lives inside `<ProcessingListeners>` and can appear alongside other listener types. The listener consumes incoming log entries one by one and decides, based solely on the XML you provide, whether to create top-level nodes, which caption to show, which icon to use, and which sub nodes to attach.
@@ -108,6 +118,25 @@ Each `<ConfigurableEntry>` represents one rule. You can add as many as needed; t
 4. **Use icons and comparers for orientation**: Consistent icons help readers skim the tree. Corresponding node comparers prevent “orphan” response nodes by automatically highlighting unmatched items.
 
 Following these guidelines, `ConfigurableProcessingListener` can express most node-creation logic directly in XML, keeping your configuration self-contained and understandable even for teammates who only interact with the configuration file.
+
+### ApacheCXFProcessingListener
+Use the Apache CXF listener when your logs come from CXF’s built-in logging feature. This listener already understands the CXF metadata layout, so it can:
+- Render request/response nodes with minimal configuration—just set `enabled`, `name`, and `description`.
+- Override icons based on either endpoint addresses (`<AddressToIconEntries>`) or comparisons against metadata fields such as `ServiceName` or `Operation` (`<ConfigurationEntries>` with `contains`/`equals` checks).
+- Trigger a `PostCreationListener` (any implementation of `net.gronostay.grobtree.api.processing.apachecxf.PostCreationListener`) to run custom code whenever the CXF listener chooses not to create nodes.
+
+Put this listener before generic ones so CXF traffic gets dedicated styling before other rules evaluate.
+
+### ExternProcessingListener
+`ExternProcessingListener` instantiates any class that implements `net.gronostay.grobtree.api.processing.ProcessingListener`. It relies on the same `ClassCreationDefinition` options discussed in [Custom Class Instantiation](#custom-class-instantiation), so you can:
+- Point at a fully qualified class name or a factory entry.
+- Opt into singleton reuse or per-call instantiation.
+- Pass simple string parameters to the constructor.
+
+Use this when your logic is easier to express in code (or already exists in an extension JAR) rather than XML. Attributes such as `id`, `enabled`, `name`, and `description` control how the listener appears in GrobTree’s UI.
+
+### FallbackProcessingListener
+The fallback listener wires up `FallbackTopNodeCreator`, which emits a neutral node for every log entry according to the evaluation’s `ParamDisplayConfigs`. Enable it when you want all log lines to remain visible even if no other listener matched, or as a diagnostic tool while you refine the main listeners. Because it runs unconditionally, keep it at the end of the `<ProcessingListeners>` list so more specific listeners get the first chance to handle entries.
 
 ---
 
