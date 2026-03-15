@@ -6,7 +6,7 @@ GrobTree ships with curated logs so you can tour the plugin, benchmark custom co
 
 | File | Highlights | Great for |
 | --- | --- | --- |
-| [`cxf-example.log`](../examples/logs/cxf-example.log) | Full Apache CXF request/response flow with SOAP envelopes, attachments, and GrobTree statistics. | Showcasing deep nesting, correlation pairs, and converter-driven colouring. |
+| [`cxf-example.log`](../examples/logs/cxf-example.log) | Full Apache CXF request/response flow with SOAP envelopes, attachments, and GrobTree statistics. | Showcasing deep nesting, correlation pairs, and CXF request replay (`Create CURL Command` / `Replay In HTTP Client`). |
 | [`spring-rest-example.log`](../examples/logs/spring-rest-example.log) | JSON-heavy REST API traffic including headers, payloads, KPI calculations, and error handling. | Demonstrating tree navigation with rich payloads plus success/error side-by-side. |
 
 ### Using the Logs

@@ -69,8 +69,12 @@ These actions live in the tree context menu but are worth knowing when documenti
 | --- | --- |
 | <img src="https://intellij-icons.jetbrains.design/icons/AllIcons/actions/copy.svg" width="20" alt="Copy"> | Copy the selected node’s caption or value to the clipboard. |
 | <img src="https://intellij-icons.jetbrains.design/icons/AllIcons/actions/menu-saveall.svg" width="20" alt="MenuSaveAll"> | Save the value of the selected node to disk. |
+| <img src="https://intellij-icons.jetbrains.design/icons/AllIcons/actions/copy.svg" width="20" alt="Copy"> | **Create CURL Command**: for replayable Apache CXF request nodes, generate a `curl` command and copy it to the clipboard. |
+| <img src="https://intellij-icons.jetbrains.design/icons/AllIcons/actions/runAll.svg" width="20" alt="RunAll"> | **Replay In HTTP Client**: for replayable Apache CXF request nodes, open a generated `GrobTree-Replay.http` request in IntelliJ HTTP Client. |
 | <img src="https://intellij-icons.jetbrains.design/icons/AllIcons/actions/collapseall.svg" width="20" alt="CollapseAll"> | Collapse the selected set of top-level nodes into a synthetic group. |
 | <img src="https://intellij-icons.jetbrains.design/icons/AllIcons/actions/diff.svg" width="20" alt="Diff"> | Compare nodes inside the current tab, project, or across projects. |
+
+See [Replay Apache CXF Requests](../cxf-request-replay.md) for a step-by-step walkthrough and troubleshooting.
 
 ## Info Dialog (Per-Tab)
 

@@ -4,12 +4,21 @@
 ## Exploring the Log Tree
 - **Main Toolbar** – manage tabs, attach/detach streams, save buffers, switch output representations (tree, JSON, XML, plain text).
 - **Find Toolbar** – search across captions/content, iterate matches, toggle case sensitivity.
-- **Context Menu** – open nodes in editors, copy structured payloads, invoke custom actions contributed by extensions.
+- **Context Menu** – open nodes in editors, copy structured payloads, replay Apache CXF requests as `curl` or IntelliJ HTTP requests, and invoke custom extension actions.
 - **Statistics Dialog** – display aggregated metrics per converter, optionally exported.
 
 Selecting a node synchronises the common editor view, highlights search hits, and reveals corresponding nodes with bold styling and icons.
 
 ![Full GrobTree View with CXF Demo Output](images/FullScreenCxfExample.png)
+
+## Replaying Apache CXF Requests
+
+When you select a replayable Apache CXF request node and open the context menu, GrobTree offers:
+
+- **Create CURL Command** – creates a request-equivalent `curl` command and copies it to the clipboard.
+- **Replay In HTTP Client** – creates and opens `GrobTree-Replay.http` in IntelliJ's HTTP client.
+
+See [Replay Apache CXF Requests](./cxf-request-replay.md) for prerequisites, walkthrough steps, and troubleshooting.
 
 ## Tab Settings Dialog
 Each GrobTree tab can override parsing and display rules through the tab-settings gear. The dialog is generated from the active `ConverterConfig.xml`, so panels appear only when the configuration defines matching elements.

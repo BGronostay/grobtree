@@ -23,12 +23,33 @@
 - **Search & Correlation** – Use the integrated find toolbar to highlight matching nodes. Corresponding-node comparers detect request/response pairs so you can traverse related log entries without scanning by hand.
 - **Statistics & Metrics** – Capture runtime stats (durations, message counts, custom KPIs) from your top-node creators and visualise them in context.
 - **Tailored for CXF & Beyond** – Ships with converters for popular stacks—including Apache CXF advanced logging—and can be tuned for any log style using the external configuration format.
+- **One-Click CXF Request Replay** – Right-click replayable CXF request nodes to generate a `curl` command (clipboard) or open a ready-to-run IntelliJ HTTP request file.
 
 ![Full GrobTree View with CXF Demo Output](docs/images/FullScreenCxfExample.png)
 
 ---
 
+## 🚀 Quick Start
+
+Get started in just 5 minutes with our **[5-Minute Quick Start Guide](./docs/quick-start.md)**!
+
+### The Fastest Way to Try GrobTree:
+1. **📥 Install** – Download the latest ZIP and install via *Settings → Plugins → ⚙ → Install Plugin from Disk…*
+2. **🎯 Open** – Launch GrobTree from *View → Tool Windows → GrobTree*
+3. **📁 Import** – Try our sample logs:
+   - [`spring-rest-example.log`](./examples/logs/spring-rest-example.log) – REST API with JSON
+   - [`cxf-example.log`](./examples/logs/cxf-example.log) – SOAP/REST with CXF
+4. **🔍 Explore** – See your logs transformed into an interactive tree!
+
+**Prefer live data?** Click "Open tabs for running configurations" to attach GrobTree to your running applications!
+
+### 📋 Quick Start Options:
+- **[5-Minute Guide](./docs/quick-start.md)** – Step-by-step visual tutorial
+- **[Starter Templates](./docs/templates/)** – Ready-to-use configurations
+- **[Guided Tour](./docs/quick-start.md#-guided-tour-your-first-log-analysis)** – Hands-on exercise
+
 ## Try GrobTree in Minutes
+
 1. **Install the plugin** – Grab the latest ZIP from the [release page](https://github.com/bgronostay/grobtree/releases/latest) and install it via *Settings → Plugins → ⚙ → Install Plugin from Disk…* (IntelliJ IDEA 2024.3+).
 2. **Load a configuration** – Stick with the bundled preset or point GrobTree at your own `ConverterConfig.xml`/JAR.
 3. **Open a playground log** – Use one of the sample files under [`examples/logs/`](./examples/logs) such as:
@@ -46,6 +67,7 @@ Prefer live data? Attach GrobTree to a running configuration and let it stream n
   - [Getting Started Guide](./docs/getting-started.md) – Installation, configuration sources, and demo walkthrough.
 - **Daily Usage**
   - [Using GrobTree](./docs/using-grobtree.md) – All tool window controls, live streaming tips, and working with statistics.
+  - [Replay Apache CXF Requests](./docs/cxf-request-replay.md) – Generate `curl` and IntelliJ HTTP requests directly from CXF request logs.
   - [IntelliJ Settings](./docs/intellij-settings.md) – Every option inside *Settings → Tools → GrobTree*.
   - [Examples & Sample Logs](./docs/examples.md) – What each curated log showcases and how to generate fresh ones.
 - **Reference**

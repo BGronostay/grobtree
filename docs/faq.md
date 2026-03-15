@@ -2,6 +2,36 @@
 
 Answers to the questions we hear most often. If something is missing, open an issue or pull request—we love improving the documentation.
 
+## 🚀 Quick Start Troubleshooting
+
+**"I don't see the GrobTree tool window after installation"**
+- **Check**: Plugin is properly installed (Settings → Plugins → Installed)
+- **Fix**: Restart IntelliJ IDEA completely
+- **Alternative**: Use View → Tool Windows → GrobTree or search with ⌘+Shift+A / Ctrl+Shift+A
+
+**"No nodes appear after importing logs"**
+- **Check**: Correct regex pattern selected in tab settings
+- **Fix**: Try "RFC 3339 timestamp and level" for standard logs
+- **Test**: Use sample files first (`spring-rest-example.log` or `cxf-example.log`)
+- **Debug**: Open tab settings and test different regex patterns
+
+**"The tree looks messy/overwhelming"**
+- **Quick Fix**: Click "Collapse All" then expand only what you need
+- **Better**: Use search (🔍) to focus on specific entries
+- **Pro Tip**: Try different evaluation configurations in tab settings
+- **Advanced**: Create custom ConverterConfig.xml with more specific patterns
+
+**"Performance is slow with large log files"**
+- **Immediate**: Reduce import range or use "Import with follow"
+- **Config**: Optimize your ConverterConfig.xml with more specific patterns
+- **Memory**: Increase IDE memory allocation if processing very large files
+- **Advanced**: Implement custom LogProvider for your specific format
+
+**"I get 'No configuration loaded' error"**
+- **Check**: Configuration source in Settings → Tools → GrobTree
+- **Fix**: Select "Internal configuration" for built-in defaults
+- **Alternative**: Point to a valid ConverterConfig.xml file or JAR
+
 ## General
 
 **Which IDE versions are supported?**  
@@ -23,6 +53,9 @@ Yes. Choose the tail icon (with the “add any” glyph) from the main toolbar, 
 
 **How do I compare request and response pairs?**  
 Converters can mark nodes as “corresponding”. Use the previous/next occurrence buttons to jump through the series; linked nodes render in bold with matching icons.
+
+**Why don’t I see “Create CURL Command” or “Replay In HTTP Client”?**  
+These actions are shown only for replayable Apache CXF **request** top nodes. If you select a non-CXF node, a child node, or a non-replayable entry, they stay hidden. To validate your setup quickly, import `cxf-example.log`, select a CXF request node, then right-click again. See [Replay Apache CXF Requests](./cxf-request-replay.md).
 
 ## Configuration & Extensions
 
