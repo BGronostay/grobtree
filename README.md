@@ -89,7 +89,7 @@ Prefer live data? Attach GrobTree to a running configuration and let it stream n
 
 ## Support & Feedback
 - Browse the [FAQ](./docs/faq.md) and [Getting Started](./docs/getting-started.md) guides for quick answers.
-- Open an issue on the [main plugin repository](https://github.com/bgronostay/grobtree-intellij-idea-plugin/issues) for bugs or feature requests.
+- Open an issue in the [GrobTree documentation and support repository](https://github.com/bgronostay/grobtree/issues) for bugs or feature requests.
 - For docs improvements, file an issue or PR right here in the `grobtree` repository.
 
 ### Contact

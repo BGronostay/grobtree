@@ -35,10 +35,10 @@ Answers to the questions we hear most often. If something is missing, open an is
 ## General
 
 **Which IDE versions are supported?**  
-GrobTree targets IntelliJ IDEA 2024.3 and newer (or any JetBrains IDE built on that platform release). Older IDEs will refuse to load the plugin.
+GrobTree currently targets IntelliJ IDEA 2025.1 and newer (or any compatible JetBrains IDE built on that platform release). Older IDEs will refuse to load the plugin.
 
 **Where do I download the plugin?**  
-I want to share it at JetBrains Marketplace. Until then, grab the ZIP from the [latest release](https://github.com/bgronostay/grobtree-intellij-idea-plugin/releases/latest). Install via *Settings → Plugins → ⚙ → Install Plugin from Disk…*.
+I want to share it at JetBrains Marketplace. Until then, grab the ZIP from the [latest public release](https://github.com/bgronostay/grobtree/releases/latest). Install via *Settings → Plugins → ⚙ → Install Plugin from Disk…*.
 
 ## Using GrobTree
 
@@ -84,7 +84,7 @@ Update your `config-version` attribute to the value expected by the plugin. The 
 
 ## Getting Help
 
-- Search or open issues on the [plugin repository](https://github.com/bgronostay/grobtree/issues).
+- Search or open issues on the [GrobTree support repository](https://github.com/bgronostay/grobtree/issues).
 - Improve the docs directly with a pull request to the `grobtree` repository.
 - Reach me on GitHub: [@bgronostay](https://github.com/bgronostay).
 

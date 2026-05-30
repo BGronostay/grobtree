@@ -46,7 +46,7 @@ Jumpstart your GrobTree configuration with these ready-to-use templates:
 ### Community & Support
 - [FAQ & Troubleshooting](./faq.md) – Common issues and solutions
 - [GitHub Discussions](https://github.com/bgronostay/grobtree/discussions) – Ask questions and share ideas
-- [Report Issues](https://github.com/bgronostay/grobtree-intellij-idea-plugin/issues) – Bug reports and feature requests
+- [Report Issues](https://github.com/bgronostay/grobtree/issues) – Bug reports and feature requests
 
 ## 🤝 Get Help
 

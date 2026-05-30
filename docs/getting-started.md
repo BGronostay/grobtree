@@ -5,7 +5,7 @@
 2. In IntelliJ IDEA, open `Settings → Plugins → ⚙ → Install Plugin from Disk…`.
 3. Restart the IDE to load the tool window (`View → Tool Windows → GrobTree`).
 
-> GrobTree requires IntelliJ IDEA 2024.3+ (or any JetBrains IDE with the Platform module).
+> GrobTree requires IntelliJ IDEA 2025.1+ (or any compatible JetBrains IDE with the Platform module).
 
 ## Point GrobTree to a Configuration
 Open `Settings → Tools → GrobTree` and choose one of the following sources:
