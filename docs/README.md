@@ -20,6 +20,10 @@ Central knowledge base for the GrobTree ecosystem. Start with the quick start gu
 - [Extending GrobTree](./extending-grobtree.md) – Integrate custom listeners, factories, and log providers.
 - [ConverterConfig.xml Reference](./converter-config.md) – Schema walkthrough covering regex, listeners, variables, and more.
 
+## Legal
+- [End User License Agreement](./legal/eula.md) – Terms for using the proprietary GrobTree IntelliJ plugin.
+- [Privacy Policy](./legal/privacy.md) – Local data processing and privacy information.
+
 ## 📁 Starter Templates
 
 Jumpstart your GrobTree configuration with these ready-to-use templates:

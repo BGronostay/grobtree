@@ -78,6 +78,13 @@ Prefer live data? Attach GrobTree to a running configuration and let it stream n
 
 ---
 
+## Distribution & Legal
+- The GrobTree IntelliJ plugin is currently distributed as proprietary freeware.
+- The GrobTree API and example projects may use separate open-source licenses.
+- Read the [End User License Agreement](./docs/legal/eula.md) and [Privacy Policy](./docs/legal/privacy.md).
+
+---
+
 ## Ecosystem Projects
 | Project | Description |
 | ------- | ----------- |
