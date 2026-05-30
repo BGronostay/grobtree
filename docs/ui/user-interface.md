@@ -2,7 +2,7 @@
 
 When the plugin loads for the first time the GrobTree tool window appears in a deliberately minimal state. IntelliJ prevents plugins from performing heavy initialisation before the user explicitly interacts with the UI, so GrobTree only renders a lightweight panel with two primary actions:
 
-- **Open tabs for running configurations** – scans active run/debug processes and opens dedicated GrobTree tabs that immediately begin evaluating live output.
+- **Open tabs for running processes and start evaluating** – scans active run/debug processes and opens dedicated GrobTree tabs that immediately begin evaluating live output.
 - **Open new tab** – creates an empty tab so you can import logs from disk, clipboard, or a file tail.
 
 ![Minimal GrobTree Tool Window](../images/GrobTreeMinimum.png)
