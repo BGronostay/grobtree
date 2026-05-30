@@ -4,7 +4,7 @@ Central knowledge base for the GrobTree ecosystem. Start with the quick start gu
 
 ## 🚀 Quick Start
 - [5-Minute Quick Start](./quick-start.md) – Get up and running in minutes with step-by-step instructions
-- [Starter Templates](#-starter-templates) – Ready-to-use configuration templates
+- [Configuration Reference](./converter-config.md) – Build and tune your own parsing rules
 
 ## Onboarding
 - [Getting Started Guide](./getting-started.md) – Install the plugin, configure sources, and tour the CXF demo.
@@ -24,28 +24,13 @@ Central knowledge base for the GrobTree ecosystem. Start with the quick start gu
 - [End User License Agreement](./legal/eula.md) – Terms for using the proprietary GrobTree IntelliJ plugin.
 - [Privacy Policy](./legal/privacy.md) – Local data processing and privacy information.
 
-## 📁 Starter Templates
+## Configuration Starters
 
-Jumpstart your GrobTree configuration with these ready-to-use templates:
+Jumpstart your GrobTree configuration from the built-in defaults and the public example extension:
 
-### 🟢 Beginner Templates
-- [Minimal Template](./templates/minimal-template.xml) – Basic log parsing for standard formats
-- [Web Application Template](./templates/web-app-template.xml) – HTTP request/response handling
-
-### 🟡 Intermediate Templates
-- [Microservices Template](https://github.com/bgronostay/grobtree-example-extension) – Trace ID correlation and distributed tracing
-- [Database Query Template](https://github.com/bgronostay/grobtree-example-extension) – SQL query analysis
-
-### 🔴 Advanced Templates
-- [Custom Extension Template](https://github.com/bgronostay/grobtree-example-extension) – Full extension framework
-- [Statistics Dashboard Template](https://github.com/bgronostay/grobtree-example-extension) – Metrics and KPI tracking
-
-## 📚 Learning Resources
-
-### Video Tutorials
-- [Getting Started in 5 Minutes](https://youtu.be/example1) – Installation and first steps
-- [Creating Your First Configuration](https://youtu.be/example2) – ConverterConfig.xml basics
-- [Advanced Features](https://youtu.be/example3) – Custom processing and extensions
+- [ConverterConfig.xml Reference](./converter-config.md) – Schema walkthrough for regexes, listeners, variables, and more.
+- [Example Extension](https://github.com/bgronostay/grobtree-example-extension) – Reference implementation for custom factories, listeners, and log providers.
+- [Sample Logs](./examples.md) – Known-good logs for testing configuration changes.
 
 ### Community & Support
 - [FAQ & Troubleshooting](./faq.md) – Common issues and solutions
@@ -63,4 +48,4 @@ Jumpstart your GrobTree configuration with these ready-to-use templates:
 Found a great pattern? Share it with the community!
 - Open a PR with your `ConverterConfig.xml`
 - Include sample logs if possible
-- We'll add it to the templates!
+- We'll add it to the documentation or example references.
