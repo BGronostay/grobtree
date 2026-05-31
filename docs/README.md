@@ -36,6 +36,7 @@ Jumpstart your GrobTree configuration from the built-in defaults and the public 
 - [FAQ & Troubleshooting](./faq.md) – Common issues and solutions
 - [GitHub Discussions](https://github.com/bgronostay/grobtree/discussions) – Ask questions and share ideas
 - [Report Issues](https://github.com/bgronostay/grobtree/issues) – Bug reports and feature requests
+- [Support Development](./support-development.md) – Optional support for ongoing GrobTree development
 
 ## 🤝 Get Help
 

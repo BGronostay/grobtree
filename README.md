@@ -86,6 +86,7 @@ Prefer live data? Use **Open tabs for running processes and start evaluating** t
 - Browse the [FAQ](./docs/faq.md) and [Getting Started](./docs/getting-started.md) guides for quick answers.
 - Open an issue in the [GrobTree documentation and support repository](https://github.com/bgronostay/grobtree/issues) for bugs or feature requests.
 - For docs improvements, file an issue or PR right here in the `grobtree` repository.
+- If GrobTree saves you time, please consider [support ongoing development](./docs/support-development.md).
 
 ### Contact
 - Maintainer: **Bernd Gronostay**
